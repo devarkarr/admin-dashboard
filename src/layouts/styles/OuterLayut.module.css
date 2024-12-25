@@ -1,0 +1,19 @@
+.root {
+    background-color: light-dark(
+      var(--mantine-color-gray-2),
+      var(--mantine-color-dark-6)
+    );
+  }
+  
+  .flexLayout {
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 7rem;
+  }
+  
+  .paperBox {
+    padding: rem(32);
+    border: 1.5px solid
+      light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  }
+  

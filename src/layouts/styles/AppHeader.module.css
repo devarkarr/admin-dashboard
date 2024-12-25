@@ -1,0 +1,53 @@
+.root {
+    position: fixed;
+    z-index: var(--mantine-z-index-app);
+    width: 100%;
+    background-color: light-dark(
+      var(--mantine-color-white),
+      var(--mantine-color-dark-6)
+    );
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  
+    @media (min-width: 48em) {
+      padding-left: rem(40);
+      padding-right: rem(40);
+    }
+  }
+  
+  .containerFlex {
+    width: 100%;
+  
+    @media (min-width: 48rem) {
+      gap: calc(
+        var(--app-shell-navbar-width) + 1rem - 2.5rem - 76px
+      ); /* nav width + content padding - header padding - logo width */
+    }
+  }
+  
+  .burger {
+    @media (min-width: 48em) {
+      display: none;
+    }
+  }
+  
+  /* Skip Buttons */
+  .skipBtn {
+    z-index: var(--mantine-z-index-max);
+    position: absolute;
+    left: 3rem;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transform: translateY(-13rem);
+  
+    &:focus {
+      transform: translateY(0);
+    }
+  }
+  
