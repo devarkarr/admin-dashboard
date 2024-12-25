@@ -1,0 +1,26 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    padding: rem(10);
+}
+
+.left_container{
+    width: 55%;
+    height: 100%;
+    border-radius: var(--mantine-radius-lg);
+    overflow: hidden;
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0%, 83% 100%, 0% 100%);
+    /* background-image: url('https://i.pinimg.com/736x/12/bb/25/12bb25fe581626fede0acef14493227f.jpg'); */
+
+}
+
+.right_conatiner{
+    width: 45%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: var(--mantine-radius-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
