@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loader from "./components/Loader";
-import RequiredAuth from "./pages/auth/required-auth";
+// import RequiredAuth from "./pages/auth/required-auth";
 
 const App = lazy(() => import("./layouts/App"));
 const GeneralError = lazy(() => import("./pages/errors/GeneralError"));
@@ -16,13 +16,13 @@ const Router = () => {
         {/* guest routes */}
         <Route path="/login" element={<Login />} />
         {/* authenticated routes */}
-        <Route element={<RequiredAuth />}>
-          <Route path="/" element={<App />} errorElement={<GeneralError />}>
-            {/* Dashboard */}
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/users" element={<User />} />
-          </Route>
+        {/* <Route element={<RequiredAuth />}> */}
+        <Route path="/" element={<App />} errorElement={<GeneralError />}>
+          {/* Dashboard */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/users" element={<User />} />
         </Route>
+        {/* </Route> */}
       </Routes>
     </Suspense>
   );
